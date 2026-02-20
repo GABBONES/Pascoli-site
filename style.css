@@ -1,8 +1,7 @@
 :root {
     --bg: #050505;
     --gold: #C5A059;
-    --panna: #F8F5F0;
-    --navy: #0A1428;
+    --panna: #F5F5F0;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
@@ -14,104 +13,89 @@ body {
     overflow-x: hidden;
 }
 
-/* CURSORE */
 .cursor {
-    width: 20px; height: 20px;
-    border: 2px solid var(--gold);
+    width: 15px; height: 15px;
+    background: var(--gold);
     border-radius: 50%;
     position: fixed;
+    z-index: 1000;
     pointer-events: none;
-    z-index: 9999;
     mix-blend-mode: difference;
 }
 
-/* HERO SECTION - IL FIX CRUCIALE */
+/* HERO GRID - IL FIX DEFINITIVO */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px;
+    padding: 0 10%;
 }
 
-.hero-inner {
-    position: relative;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
     width: 100%;
-    max-width: 1000px; /* Limita la grandezza totale */
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.image-box {
-    width: 300px; /* Larghezza FISSA */
-    height: 400px; /* Altezza FISSA */
-    position: relative;
-    z-index: 2;
+.main-title {
+    font-family: 'Bodoni Moda';
+    font-size: clamp(3rem, 8vw, 10rem);
+    line-height: 0.9;
 }
 
-.image-box img {
+.main-title span {
+    -webkit-text-stroke: 1px var(--panna);
+    color: transparent;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 400px; /* Impedisce l'esplosione dell'immagine */
+    aspect-ratio: 3/4;
+    border: 1px solid var(--gold);
+    padding: 15px;
+}
+
+.image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ritaglia senza deformare */
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+/* SEZIONI */
+.section { padding: 120px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.panna { background: var(--panna); color: var(--bg); }
+
+.gold-text { font-family: 'Bodoni Moda'; font-size: 4rem; color: var(--gold); margin-bottom: 30px; }
+.text-columns { column-count: 2; column-gap: 50px; }
+.lead { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+
+/* GELSOMINO GRID */
+.poetry-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.poetry-header { font-family: 'Bodoni Moda'; font-size: 3.5rem; color: var(--gold); margin-bottom: 40px; }
+.verses { font-family: 'Bodoni Moda'; font-size: 2.5rem; font-style: italic; border-left: 2px solid var(--gold); padding-left: 30px; }
+
+.analysis-card {
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
     border: 1px solid var(--gold);
 }
 
-.text-box {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    text-align: center;
-    width: 100%;
-    pointer-events: none;
-}
+.footer { padding: 60px; text-align: center; font-size: 0.7rem; opacity: 0.4; letter-spacing: 5px; }
 
-.main-name {
-    font-family: 'Bodoni Moda';
-    font-size: clamp(3rem, 10vw, 8rem); /* Si adatta senza esplodere */
-    line-height: 0.8;
-    mix-blend-mode: difference;
-}
-
-.outline { -webkit-text-stroke: 1px var(--panna); color: transparent; }
-
-/* SEZIONI */
-.section { padding: 100px 0; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-.panna { background-color: var(--panna); color: #111; }
-
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-
-.section-title { font-family: 'Bodoni Moda'; font-size: 4rem; color: var(--gold); }
-.lead { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
-
-/* GELSOMINO FIX */
-.title-center { text-align: center; font-family: 'Bodoni Moda'; font-size: 4rem; margin-bottom: 60px; }
-.poetry-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-
-.verses {
-    font-family: 'Bodoni Moda';
-    font-size: 2.2rem;
-    font-style: italic;
-    border-right: 1px solid var(--gold);
-    padding-right: 40px;
-}
-
-.analysis-card {
-    background: var(--navy);
-    padding: 40px;
-    color: var(--panna);
-    border-bottom: 5px solid var(--gold);
-}
-
-/* FOOTER */
-.footer { padding: 50px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .grid-2, .poetry-flex { grid-template-columns: 1fr; }
-    .image-box { width: 200px; height: 300px; }
-    .verses { border-right: none; border-bottom: 1px solid var(--gold); padding-bottom: 20px; }
+/* MOBILE / TABLET FIX */
+@media (max-width: 900px) {
+    .hero-grid, .poetry-grid { grid-template-columns: 1fr; }
+    .text-columns { column-count: 1; }
+    .hero { padding-top: 100px; height: auto; }
 }
