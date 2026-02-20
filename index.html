@@ -1,155 +1,107 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giovanni Pascoli | Il Nido e il Simbolo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Pascoli | Il Nido e il Simbolo</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- AOS Animation Library -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;500;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO -->
 <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Giovanni Pascoli</h1>
-        <p class="subtitle">Il Nido, il Fanciullino, il Mistero della Notte</p>
-        <a href="#biografia" class="btn">Inizia il viaggio</a>
+    <div class="hero-content">
+        <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Giovanni Pascoli" class="animate__animated animate__zoomIn">
+        <h1 class="animate__animated animate__fadeInDown animate__delay-1s">Giovanni Pascoli</h1>
+        <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">Il Poeta del Nido e dell'Infinito</p>
+        <a href="#biografia" class="btn-hero animate__animated animate__fadeIn animate__delay-2s">Esplora il Mistero</a>
     </div>
 </header>
 
-<!-- BIOGRAFIA -->
 <section id="biografia" class="biografia-section">
   <div class="container">
-    <h2 data-aos="fade-right">Biografia</h2>
-    <div class="timeline">
-      <div class="timeline-item" data-aos="fade-up">
-        <span class="year">1855</span>
-        <p>Nascita a San Mauro di Romagna.</p>
+    <h2 class="section-title" data-aos="fade-up">Il Romanzo di una Vita</h2>
+    <div class="bio-grid">
+      <div class="bio-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="big-year">1855</span>
+        <h3>L'Idillio Spezzato</h3>
+        <p>Nasce a San Mauro di Romagna. Un'infanzia serena che diventerà il mito del "giardino perduto" e del nido familiare.</p>
       </div>
-      <div class="timeline-item" data-aos="fade-up">
-        <span class="year">1867</span>
-        <p>Perde il padre in circostanze tragiche.</p>
+      <div class="bio-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="big-year">1867</span>
+        <h3>Il 10 Agosto</h3>
+        <p>L'assassinio del padre Ruggero. È il trauma centrale: il "nido" si frantuma e la morte diventa una presenza costante.</p>
       </div>
-      <div class="timeline-item" data-aos="fade-up">
-        <span class="year">1871</span>
-        <p>Muore il fratello maggiore Carlo; famiglia profondamente segnata.</p>
+      <div class="bio-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="big-year">1891</span>
+        <h3>Myricae</h3>
+        <p>Le "piccole cose" della natura diventano simboli di un mistero universale. Rivoluzione totale del linguaggio poetico.</p>
       </div>
-      <div class="timeline-item" data-aos="fade-up">
-        <span class="year">1912</span>
-        <p>Muore a Bologna, lasciando un’eredità poetica straordinaria.</p>
+      <div class="bio-card" data-aos="fade-up" data-aos-delay="400">
+        <span class="big-year">1912</span>
+        <h3>L'Eredità</h3>
+        <p>Muore a Bologna. Il fanciullino tace, ma la sua eco influenza tutta la poesia del Novecento italiano.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VISIONE POLITICA -->
 <section id="politica" class="politica-section">
   <div class="container">
-    <h2 data-aos="fade-right">Visione Politica</h2>
-    <p data-aos="fade-up">
-      Pascoli sosteneva un <strong>socialismo umanitario</strong> e la creazione di una “nazione proletaria”, 
-      in cui la solidarietà e la giustizia sociale erano valori centrali.
-    </p>
+    <div class="politica-wrapper">
+      <div class="politica-text" data-aos="fade-right">
+        <h2 class="display-font">La Nazione Proletaria</h2>
+        <p>Pascoli trasforma il trauma privato in visione pubblica. Il suo <strong>Socialismo Umanitario</strong> non è lotta di classe, ma fratellanza universale nel dolore.</p>
+        <p>Nel celebre discorso <em>"La grande Proletaria si è mossa"</em>, il concetto di "nido" si espande: la Nazione diventa la madre che protegge i figli costretti all'emigrazione.</p>
+      </div>
+      <div class="politica-quote" data-aos="fade-left">
+        <p>"Siate buoni. Il dolore è già troppo in questo mondo."</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- IL FANCIULLINO -->
-<section id="fanciullino" class="fanciullino-section">
-  <div class="container">
-    <h2 data-aos="fade-right">Il Fanciullino</h2>
-    <p data-aos="fade-up">
-      Il <em>Fanciullino</em> rappresenta l’idea che l’artista mantiene dentro di sé la capacità di meravigliarsi, 
-      osservando il mondo con occhi puri e innocenti. Questa sensibilità permette di cogliere la bellezza anche nelle piccole cose.
-    </p>
-  </div>
-</section>
-
-<!-- IL GELSOMINO NOTTURNO -->
 <section id="gelsomino" class="gelsomino-section">
     <div class="container">
-        <h2 data-aos="fade-right">Il Gelsomino Notturno</h2>
-        
-        <div class="poetry-layout">
-            <div class="poem" data-aos="fade-up">
-                <p>E s’aprono i fiori notturni,<br>
-                nell’ora che penso ai miei cari.<br>
-                Sono apparse in mezzo ai viburni<br>
-                le farfalle crepuscolari.</p>
-
-                <p>Da un pezzo si tacquero i gridi:<br>
-                là sola una casa bisbiglia.<br>
-                Sotto l’ali dormono i nidi,<br>
-                come gli occhi sotto le ciglia.</p>
-
-                <p>Dai calici aperti si esala<br>
-                l’odore di fragole rosse.<br>
-                Splende un lume là nella sala.<br>
-                Nasce l’erba sopra le fosse.</p>
-
-                <p>Un’ape tardiva sussurra<br>
-                trovando già prese le celle.<br>
-                La Chioccetta per l’aia azzurra<br>
-                va col suo pigolio di stelle.</p>
-
-                <p>Per tutta la notte s’esala<br>
-                l’odore che passa col vento.<br>
-                Passa il lume su per la scala;<br>
-                brilla al primo piano: s’è spento...</p>
-
-                <p>È l’alba: si chiudono i petali<br>
-                un poco gualciti; si cova,<br>
-                dentro l’urna molle e segreta,<br>
-                non so che felicità nuova.</p>
+        <h2 class="section-title" data-aos="zoom-in">Il Gelsomino Notturno</h2>
+        <div class="poetry-container">
+            <div class="poem-scroll" data-aos="fade-right">
+                <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.<br>Sono apparse in mezzo ai viburni<br>le farfalle crepuscolari.</p>
+                <p>Da un pezzo si tacquero i gridi:<br>là sola una casa bisbiglia.<br>Sotto l’ali dormono i nidi,<br>come gli occhi sotto le ciglia.</p>
+                <p>Dai calici aperti si esala<br>l’odore di fragole rosse.<br>Splende un lume là nella sala.<br>Nasce l’erba sopra le fosse.</p>
+                <p>...</p>
+                <p>È l’alba: si chiudono i petali<br>un poco gualciti; si cova,<br>dentro l’urna molle e segreta,<br>non so che felicità nuova.</p>
             </div>
 
-            <div class="analysis" data-aos="fade-left">
-                <h3>Analisi Simbolista</h3>
-                <p>
-                Pubblicata nei <em>Canti di Castelvecchio</em>, la poesia celebra simbolicamente 
-                la prima notte di nozze di un amico del poeta. Il <strong>gelsomino</strong> diventa 
-                metafora dell’unione amorosa e della fecondità.
-                </p>
-
-                <blockquote>
-                    “Nasce l’erba sopra le fosse”
-                </blockquote>
-
-                <p>
-                Il contrasto vita/morte è centrale: la memoria dei lutti familiari convive con 
-                l’idea di rinascita. L’erotismo è suggerito in modo allusivo: 
-                i <em>calici aperti</em>, l’ape, l’urna molle e segreta.
-                </p>
-
-                <p>
-                La dimensione notturna amplifica il mistero, mentre il linguaggio resta 
-                delicato, musicale, carico di simboli naturali.
-                </p>
+            <div class="analysis-box" data-aos="fade-left">
+                <h3 class="analysis-title">L'Analisi Simbolista</h3>
+                <p>Quest'opera è un <strong>epitalamio</strong>: un canto per le nozze di un amico. Pascoli osserva dall'esterno il rito della vita che nasce, sentendosi però escluso dall'amore adulto.</p>
+                <ul class="symbol-list">
+                    <li><strong>Erotismo Allusivo:</strong> Il "gelsomino" e l'"urna" suggeriscono la fecondazione senza nominarla direttamente.</li>
+                    <li><strong>Contrasto Vita/Morte:</strong> La vita nasce ("felicità nuova") mentre il poeta pensa ai suoi morti e all'erba sulle fosse.</li>
+                    <li><strong>Sinestesia:</strong> L'"odore di fragole rosse" unisce olfatto e vista per creare una suggestione onirica.</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>Progetto di Grafica e Comunicazione – Studio su Giovanni Pascoli</p>
+    <p>© 2026 - Progetto Digitale su Giovanni Pascoli - Studio di Grafica e Comunicazione</p>
 </footer>
 
-<!-- SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({
-    duration: 1200,
-    once: true
-});
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
 </script>
 
 </body>
