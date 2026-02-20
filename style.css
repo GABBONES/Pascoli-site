@@ -1,181 +1,117 @@
-/* --- TEMA DESIGNER: BLU, PANNA, ORO --- */
 :root {
-    --black: #050505;
-    --gold: #C5A059;   /* Oro Foglia */
-    --panna: #F8F5F2;  /* Panna Caldo */
-    --navy: #0A1428;   /* Blu Notte Profondo */
-    --text-dark: #1A1A1A;
+    --bg: #050505;
+    --gold: #C5A059;
+    --panna: #F8F5F0;
+    --navy: #0A1428;
 }
 
-/* --- RESET & STABILITÀ --- */
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
 
-html, body {
-    overflow-x: hidden; /* Elimina il movimento orizzontale a casaccio */
-    background-color: var(--black);
+body {
+    background-color: var(--bg);
     color: var(--panna);
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.7;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* --- CURSORE LUXURY --- */
-.cursor-follower {
-    width: 18px; height: 18px;
-    background: var(--gold);
+/* CURSORE */
+.cursor {
+    width: 20px; height: 20px;
+    border: 2px solid var(--gold);
     border-radius: 50%;
     position: fixed;
-    top: -9px; left: -9px;
+    pointer-events: none;
     z-index: 9999;
-    pointer-events: none;
     mix-blend-mode: difference;
-    transition: transform 0.1s ease-out;
 }
 
-/* --- BACKGROUND DECOR --- */
-.massive-bg-text {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 35vw;
-    font-weight: 900;
-    color: rgba(255,255,255,0.02);
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* --- HERO SECTION --- */
+/* HERO SECTION - IL FIX CRUCIALE */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, #111 0%, #050505 100%);
+    position: relative;
+    padding: 20px;
 }
 
-.image-frame {
-    width: 320px; height: 420px;
+.hero-inner {
     position: relative;
-    border: 1px solid var(--gold);
-    padding: 10px;
+    width: 100%;
+    max-width: 1000px; /* Limita la grandezza totale */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-box {
+    width: 300px; /* Larghezza FISSA */
+    height: 400px; /* Altezza FISSA */
+    position: relative;
     z-index: 2;
 }
 
-.image-frame img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: sepia(0.2) contrast(1.1);
-}
-
-.gold-accent-box {
-    position: absolute;
-    top: -20px; right: -20px;
-    width: 100px; height: 100px;
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ritaglia senza deformare */
     border: 1px solid var(--gold);
-    z-index: -1;
 }
 
-.hero-titles {
+.text-box {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
     text-align: center;
-    z-index: 5;
-    bottom: 10%;
+    width: 100%;
+    pointer-events: none;
 }
 
-.main-title {
+.main-name {
     font-family: 'Bodoni Moda';
-    font-size: 8rem;
+    font-size: clamp(3rem, 10vw, 8rem); /* Si adatta senza esplodere */
     line-height: 0.8;
+    mix-blend-mode: difference;
 }
 
 .outline { -webkit-text-stroke: 1px var(--panna); color: transparent; }
 
-.hero-tagline {
-    font-size: 0.7rem;
-    letter-spacing: 8px;
-    margin-top: 25px;
-    color: var(--gold);
-}
+/* SEZIONI */
+.section { padding: 100px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.panna { background-color: var(--panna); color: #111; }
 
-/* --- SEZIONI --- */
-.section { padding: 180px 0; }
-.container { max-width: 1250px; margin: 0 auto; padding: 0 50px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 
-.panna-bg { background-color: var(--panna); color: var(--text-dark); }
-.dark-blue-bg { background-color: var(--navy); color: var(--panna); }
+.section-title { font-family: 'Bodoni Moda'; font-size: 4rem; color: var(--gold); }
+.lead { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; }
 
-/* EDITORIAL GRID */
-.grid-editorial { display: grid; grid-template-columns: 1fr 1.5fr; gap: 100px; align-items: start; }
-.grid-editorial.inverse { grid-template-columns: 1.5fr 1fr; }
+/* GELSOMINO FIX */
+.title-center { text-align: center; font-family: 'Bodoni Moda'; font-size: 4rem; margin-bottom: 60px; }
+.poetry-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 
-.display-1 { font-family: 'Bodoni Moda'; font-size: 5rem; line-height: 0.9; }
-.gold-text { color: var(--gold); }
-
-.dropcap { font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
-
-.side-quote {
-    background: var(--gold);
-    color: var(--black);
-    padding: 60px;
+.verses {
     font-family: 'Bodoni Moda';
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-style: italic;
-    box-shadow: 30px 30px 0 var(--navy);
-}
-
-/* POETICA CARD */
-.fanciullino-card {
-    border: 1px solid var(--gold);
-    padding: 80px;
-    text-align: center;
-}
-
-.title-medium { font-family: 'Bodoni Moda'; font-size: 3.5rem; margin-bottom: 30px; }
-
-.tech-specs { display: flex; justify-content: center; gap: 60px; margin-top: 50px; }
-.spec span { display: block; font-family: 'Bodoni Moda'; font-size: 2.2rem; color: var(--gold); }
-
-/* --- GELSOMINO NOTTURNO (PROPORZIONATO) --- */
-.gelsomino-container { background-color: var(--panna); color: var(--text-dark); }
-.section-title-center { font-family: 'Bodoni Moda'; font-size: 4.5rem; text-align: center; margin-bottom: 80px; }
-
-.poetry-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; align-items: center; }
-
-.verses-side {
-    font-family: 'Bodoni Moda';
-    font-size: 2.8rem;
-    font-style: italic;
-    line-height: 1.3;
     border-right: 1px solid var(--gold);
-    padding-right: 60px;
+    padding-right: 40px;
 }
 
-.verses-side p { margin-bottom: 50px; }
-
-.analysis-box {
-    padding: 50px;
+.analysis-card {
     background: var(--navy);
+    padding: 40px;
     color: var(--panna);
-    position: relative;
-    box-shadow: 20px 20px 60px rgba(0,0,0,0.15);
+    border-bottom: 5px solid var(--gold);
 }
-
-.gold-label { font-size: 0.7rem; letter-spacing: 4px; color: var(--gold); display: block; margin-bottom: 20px; }
 
 /* FOOTER */
-.designer-footer {
-    padding: 100px;
-    background: #000;
-    color: var(--gold);
-    text-align: center;
-    letter-spacing: 8px;
-    font-size: 0.7rem;
-    font-weight: 100;
-}
+.footer { padding: 50px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 1024px) {
-    .grid-editorial, .grid-editorial.inverse, .poetry-grid { grid-template-columns: 1fr; gap: 50px; }
-    .main-title { font-size: 4.5rem; }
-    .verses-side { border-right: none; border-bottom: 1px solid var(--gold); padding-right: 0; padding-bottom: 40px; font-size: 2rem; }
-    .display-1 { font-size: 3.5rem; }
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid-2, .poetry-flex { grid-template-columns: 1fr; }
+    .image-box { width: 200px; height: 300px; }
+    .verses { border-right: none; border-bottom: 1px solid var(--gold); padding-bottom: 20px; }
 }
