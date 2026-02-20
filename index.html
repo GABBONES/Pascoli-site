@@ -2,72 +2,75 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G. Pascoli | Digital Experience</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,900;1,900&family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Pascoli | Editorial Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,900;1,900&family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="cursor"></div>
+    <div class="cursor"></div>
 
-<section class="hero">
-    <div class="hero-inner">
-        <div class="image-box" data-aos="zoom-in">
-            <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Pascoli">
-            <div class="frame-deco"></div>
-        </div>
-        <div class="text-box">
-            <h1 class="main-name">GIOVANNI<br><span class="outline">PASCOLI</span></h1>
-            <p class="tagline">IL POETA DEL NIDO</p>
-        </div>
-    </div>
-</section>
-
-<section class="section panna">
-    <div class="container grid-2">
-        <div class="title-col" data-aos="fade-right">
-            <h2 class="section-title">Il Trauma<br>del 1867</h2>
-        </div>
-        <div class="content-col" data-aos="fade-left">
-            <p class="lead">L'omicidio del padre Ruggero è l'eclissi totale della sua infanzia.</p>
-            <p>Ogni poesia è un tentativo di ricostruire il <strong>Nido</strong>, l'unico spazio sacro che protegge dalla violenza del mondo esterno e permette di parlare con i morti.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section gelsomino-sect">
-    <div class="container">
-        <h2 class="title-center">Il Gelsomino Notturno</h2>
-        <div class="poetry-flex">
-            <div class="verses" data-aos="fade-up">
-                <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.</p>
-                <p>Dai calici aperti si esala<br>l’odore di fragole rosse.</p>
-                <p>È l’alba: si chiudono i petali<br>un poco gualciti; si cova...</p>
+    <header class="hero">
+        <div class="hero-grid">
+            <div class="hero-left" data-aos="fade-right">
+                <h1 class="main-title">GIOVANNI<br><span>PASCOLI</span></h1>
+                <p class="hero-tagline">Oltre il Nido, nel Mistero.</p>
             </div>
-            <div class="analysis" data-aos="fade-up" data-aos-delay="200">
-                <div class="analysis-card">
-                    <h3>L'Eros dell'Escluso</h3>
-                    <p>Un epitalamio dove la vita nasce dal segreto, mentre il poeta resta fuori, nel recinto dei suoi morti. Una sinestesia perfetta tra olfatto e visione.</p>
+            <div class="hero-right" data-aos="zoom-in">
+                <div class="image-wrapper">
+                    <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Pascoli">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer class="footer">
-    <p>DESIGN 2026 | STUDIO PASCOLI</p>
-</footer>
+    <section class="section panna">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2 class="gold-text" data-aos="fade-up">10 Agosto 1867</h2>
+                <div class="text-columns" data-aos="fade-up" data-aos-delay="200">
+                    <p class="lead">L'assassinio del padre Ruggero non è storia, è una ferita aperta che genera l'intera sua poetica.</p>
+                    <p>Da questo trauma nasce il <strong>Nido</strong>: un recinto sacro per i superstiti, dove il tempo si ferma e i morti continuano a vivere. È l'unico luogo dove l'anima di Pascoli trova pace dalla ferocia del mondo esterno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 1200, once: true });
-    const cursor = document.querySelector('.cursor');
-    document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-</script>
+    <section class="section gelsomino">
+        <div class="container">
+            <div class="poetry-grid">
+                <div class="poetry-text" data-aos="fade-right">
+                    <h2 class="poetry-header">IL GELSOMINO<br>NOTTURNO</h2>
+                    <div class="verses">
+                        <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.</p>
+                        <p>Dai calici aperti si esala<br>l’odore di fragole rosse.</p>
+                        <p>È l’alba: si chiudono i petali<br>un poco gualciti; si cova...</p>
+                    </div>
+                </div>
+                <div class="poetry-analysis" data-aos="fade-left">
+                    <div class="analysis-card">
+                        <h3>L'Eros dell'Escluso</h3>
+                        <p>Mentre la casa "bisbiglia" e la vita nasce, il poeta resta sulla soglia. È il dramma di chi osserva la fecondazione ma appartiene al mondo dei morti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 DESIGN BY GEMINI | STUDIO PASCOLI</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
