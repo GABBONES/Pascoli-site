@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Pascoli | Il Poeta del Mistero</title>
+    <title>Giovanni Pascoli | Il Poeta del Nido</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,900;1,400&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,900;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
     <div class="hero-content">
-        <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Giovanni Pascoli" class="animate__animated animate__fadeIn">
-        <h1 class="animate__animated animate__backInDown">Giovanni Pascoli</h1>
-        <p class="subtitle">La voce del Fanciullino nel nido del mondo</p>
+        <div class="img-frame animate__animated animate__fadeIn">
+            <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Giovanni Pascoli">
+        </div>
+        <h1 class="animate__animated animate__slideInDown">Giovanni Pascoli</h1>
+        <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">Il simbolismo delle piccole cose</p>
     </div>
 </header>
 
 <section id="biografia" class="section panna-bg">
     <div class="container">
-        <h2 class="title" data-aos="fade-up">La Vita: Un'esistenza nel Nido</h2>
-        <div class="info-text" data-aos="fade-up">
-            <p>Giovanni Pascoli non fu solo un poeta, ma un innovatore radicale della lingua italiana. La sua vita fu segnata indelebilmente dalla tragedia del <strong>10 agosto 1867</strong>, quando il padre fu assassinato in circostanze mai chiarite. Questo evento, seguito da una scia di lutti familiari (la madre, la sorella, i fratelli), trasformò la sua poetica in un tentativo ossessivo di ricostruire il <strong>"Nido"</strong>: uno spazio chiuso, protettivo e sacro, unico rifugio contro il male del mondo esterno.</p>
-        </div>
-        <div class="bio-grid">
-            <div class="bio-card" data-aos="zoom-in">
-                <span class="gold-num">01</span>
-                <h3>L'Istruzione</h3>
-                <p>Allievo di Giosuè Carducci a Bologna, ne ereditò la cattedra, pur distaccandosi dal suo classicismo monumentale per un simbolismo più intimo.</p>
+        <h2 class="section-title" data-aos="fade-right">Il Trauma e il Nido</h2>
+        <div class="bio-content">
+            <div class="bio-text" data-aos="fade-up">
+                <p>La vita di Giovanni Pascoli è segnata da una data spartiacque: il <strong>10 agosto 1867</strong>. L'omicidio del padre Ruggero, che tornava a casa su un calesse trainato da una "cavalla storna", distrusse l'idillio familiare. Questo lutto non rimase isolato: nel giro di pochi anni morirono la madre, la sorella maggiore e i fratelli Luigi e Giacomo.</p>
+                <p>Da qui nasce la teoria del <strong>Nido</strong>: la casa e la famiglia superstite diventano un guscio protettivo contro un mondo esterno percepito come una giungla violenta e incomprensibile. Ogni suo verso è un tentativo di ricucire quel legame spezzato con i morti.</p>
             </div>
-            <div class="bio-card" data-aos="zoom-in" data-aos-delay="100">
-                <span class="gold-num">02</span>
-                <h3>Il Fanciullino</h3>
-                <p>Nel 1897 pubblica il suo saggio fondamentale: il poeta è colui che sa ascoltare il "fanciullino" che resta in ognuno di noi, capace di meravigliarsi delle piccole cose.</p>
-            </div>
-            <div class="bio-card" data-aos="zoom-in" data-aos-delay="200">
-                <span class="gold-num">03</span>
-                <h3>L'Innovazione</h3>
-                <p>Introdusse il fonosimbolismo (onomatopee come "chiù", "don don") e mescolò termini tecnici con parole quotidiane, preannunciando la poesia moderna.</p>
+            
+            <div class="bio-cards-grid">
+                <div class="card" data-aos="zoom-in">
+                    <span class="num">01</span>
+                    <h3>Formazione Classica</h3>
+                    <p>Studiò a Bologna sotto la guida di Giosuè Carducci. Nonostante l'influenza del maestro, Pascoli preferì una lingua più intima e frammentata rispetto al classicismo solenne carducciano.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="num">02</span>
+                    <h3>Il Fanciullino</h3>
+                    <p>Nel 1897 definì la sua poetica: dentro ogni uomo vive un bambino che vede il mondo per la prima volta. Il poeta è l'unico che sa dargli voce, scoprendo la poesia nelle piccole cose (Myricae).</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="num">03</span>
+                    <h3>Fonosimbolismo</h3>
+                    <p>Fu un rivoluzionario del suono. Usò onomatopee e termini tecnici per rendere la natura "parlante", influenzando tutta la poesia del '900.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -49,14 +56,16 @@
 
 <section id="politica" class="section blue-bg">
     <div class="container">
-        <div class="flex-row">
-            <div class="flex-text" data-aos="fade-right">
-                <h2 class="title gold-text">Umanitarismo e Nazione</h2>
-                <p>Il socialismo di Pascoli è peculiare: si allontana dal marxismo per approdare a un <strong>socialismo umanitario</strong> basato sulla solidarietà tra le classi. Per lui, il dolore umano deve unire, non dividere. </p>
-                <p>Nel 1911, con il discorso <em>"La grande Proletaria si è mossa"</em>, sostenne l'impresa coloniale in Libia: non per imperialismo, ma per dare terra e dignità ai lavoratori italiani costretti all'emigrazione, estendendo il concetto di "nido" all'intera patria.</p>
+        <h2 class="section-title gold-text" data-aos="fade-left">Visione Politica</h2>
+        <div class="politica-grid">
+            <div class="pol-info" data-aos="fade-up">
+                <h3>Socialismo Umanitario</h3>
+                <p>In gioventù fu arrestato per la sua adesione al socialismo anarchico. Dopo il carcere, la sua visione mutò: rifiutò la lotta di classe a favore di una solidarietà universale basata sul dolore comune a tutti gli uomini.</p>
+                <p>Sosteneva che la proprietà privata fosse un male se generava odio, ma difendeva la "piccola proprietà" come estensione del nido familiare.</p>
             </div>
-            <div class="quote-box" data-aos="fade-left">
-                <blockquote>"L'Italia è una nazione che ha sofferto, e che ora cerca il suo posto nel mondo."</blockquote>
+            <div class="pol-info highlight" data-aos="fade-up" data-aos-delay="100">
+                <h3>La Grande Proletaria</h3>
+                <p>Nel 1911, Pascoli giustificò l'espansione coloniale in Libia. Per lui, l'Italia era una "Nazione Proletaria" che aveva il diritto di dare terra ai propri figli emigrati, affinché non dovessero più sentirsi "orfani" in terre straniere.</p>
             </div>
         </div>
     </div>
@@ -64,28 +73,34 @@
 
 <section id="gelsomino" class="section panna-bg">
     <div class="container">
-        <h2 class="title" data-aos="fade-down">Il Gelsomino Notturno</h2>
-        <div class="poetry-layout">
-            <div class="poem-text" data-aos="fade-right">
-                <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.<br>Sono apparse in mezzo ai viburni<br>le farfalle crepuscolari.</p>
-                <p>Da un pezzo si tacquero i gridi:<br>là sola una casa bisbiglia.<br>Sotto l’ali dormono i nidi,<br>come gli occhi sotto le ciglia.</p>
-                <p>Dai calici aperti si esala<br>l’odore di fragole rosse.<br>Splende un lume là nella sala.<br>Nasce l’erba sopra le fosse.</p>
+        <h2 class="section-title" data-aos="fade-down">Il Gelsomino Notturno</h2>
+        <div class="gelsomino-layout">
+            <div class="poem-block" data-aos="fade-right">
+                <p class="stanza">E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.<br>Sono apparse in mezzo ai viburni<br>le farfalle crepuscolari.</p>
+                <p class="stanza">Da un pezzo si tacquero i gridi:<br>là sola una casa bisbiglia.<br>Sotto l’ali dormono i nidi,<br>come gli occhi sotto le ciglia.</p>
+                <p class="stanza">Dai calici aperti si esala<br>l’odore di fragole rosse.<br>Splende un lume là nella sala.<br>Nasce l’erba sopra le fosse.</p>
             </div>
-            <div class="poem-analysis" data-aos="fade-left">
-                <h3>Analisi Proporzionata</h3>
-                <p>Composta per le nozze dell'amico Gabriele Briganti, la lirica è un capolavoro di <strong>fonosimbolismo</strong> e allusioni erotiche delicate. Il ritmo è cullante, ma nasconde un'inquietudine profonda.</p>
-                <p>La "casa che bisbiglia" e il "lume che sale la scala" indicano l'atto dell'unione fisica, da cui Pascoli si sente escluso, restando a guardare dal recinto del suo dolore, tra le "fosse" e i cari defunti.</p>
+            <div class="analysis-block" data-aos="fade-left">
+                <h3>L'Epitalamio dell'Escluso</h3>
+                <p>Poesia scritta per le nozze di un amico, è carica di <strong>simbolismo erotico</strong> mediato dalla natura. Mentre il fiore (gelsomino) si apre e la vita si genera all'interno della casa ("una casa bisbiglia"), il poeta resta fuori, al freddo, vicino al pensiero dei suoi morti.</p>
+                <ul class="points">
+                    <li><strong>Sinestesia:</strong> "odore di fragole rosse" (olfatto + vista).</li>
+                    <li><strong>Il Lume:</strong> Simbolo della vita coniugale che si spegne al piano superiore.</li>
+                    <li><strong>L'Urna:</strong> Il grembo materno che cova una "felicità nuova".</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>Studio Storico-Letterario su Giovanni Pascoli - 2026</p>
+    <p>Analisi Critica su Giovanni Pascoli - Esame di Letteratura 2026</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000, once: true });</script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+</script>
 
 </body>
 </html>
