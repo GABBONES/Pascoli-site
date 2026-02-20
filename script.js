@@ -1,22 +1,31 @@
-// Animazione Fade-In allo scroll
-const observerOptions = {
-    threshold: 0.2
-};
+// Gestione barra di scorrimento in alto
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.querySelector(".scroll-indicator").style.width = scrolled + "%";
+});
+
+// Intersection Observer per apparizione sezioni
+const observerOptions = { threshold: 0.1 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.fade-in').forEach(section => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(50px)";
-    section.style.transition = "all 0.8s ease-out";
-    observer.observe(section);
-});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-console.log("Sito su Pascoli caricato con successo!");
+// Effetto Reveal sulle scritte dell'Hero
+window.onload = () => {
+    document.querySelectorAll('.reveal').forEach((el, index) => {
+        setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+            el.style.transition = "1s ease-out";
+        }, 300 * index);
+    });
+};
