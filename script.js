@@ -1,28 +1,17 @@
-// Animazione allo scroll per testi
+// Apparizione sezioni con sfocatura
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add('active');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal-section').forEach(section => observer.observe(section));
 
-// Effetto Parallasse per Fiori e Rondini
+// Effetto sfocatura dinamica dello sfondo allo scroll
 window.addEventListener('scroll', () => {
-    const scroll = window.pageYOffset;
-    
-    document.querySelectorAll('.flower').forEach(f => {
-        f.style.transform = `translateY(${scroll * 0.2}px) rotate(${scroll * 0.1}deg)`;
-    });
-    
-    document.querySelectorAll('.bird').forEach(b => {
-        b.style.transform = `translateX(${scroll * 0.1}px) translateY(${scroll * -0.1}px)`;
-    });
-});
-
-// Titolo Hero reveal
-window.addEventListener('load', () => {
-    document.querySelector('.hero-content').style.opacity = '1';
+    const scrollVal = window.scrollY;
+    const blurAmount = Math.min(scrollVal / 100, 5); // Aumenta il blur man mano che scendi
+    // document.querySelector('.blur-overlay').style.backdropFilter = `blur(${blurAmount}px)`;
 });
