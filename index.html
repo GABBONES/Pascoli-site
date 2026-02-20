@@ -3,92 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pascoli: L'Oltre Visibile</title>
+    <title>Pascoli: L'Eterno Fanciullo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="scroll-indicator"></div>
+    <div class="floating-elements">
+        <div class="flower f1">🌸</div>
+        <div class="bird b1">🕊️</div>
+        <div class="flower f2">🌸</div>
+        <div class="bird b2">🕊️</div>
+    </div>
 
     <nav class="navbar">
         <div class="logo">G.<span>PASCOLI</span></div>
         <div class="nav-links">
-            <a href="#vita">Vita</a>
-            <a href="#fanciullino">Fanciullino</a>
-            <a href="#gelsomino">Gelsomino</a>
+            <a href="#vita">Biografia</a>
+            <a href="#fanciullino">Poetica</a>
+            <a href="#politica">Politica</a>
+            <a href="#gelsomino">Analisi</a>
         </div>
     </nav>
 
-    <section class="hero">
+    <header class="hero">
         <div class="hero-content">
-            <span class="reveal">Decadentismo Italiano</span>
-            <h1 class="reveal">Giovanni Pascoli</h1>
-            <p class="reveal italic">"C'è un fanciullo nelle profondità di ogni anima."</p>
-            <a href="#vita" class="btn-oro reveal">Esplora il Nido</a>
+            <h1 class="reveal-text">Giovanni Pascoli</h1>
+            <p class="reveal-text-sub">Il mistero delle piccole cose e il nido infranto.</p>
         </div>
-    </section>
+    </header>
 
-    <main>
-        <section id="vita" class="section-padding fade-up">
-            <h2 class="display-title">Il Trauma <br><span class="oro-text">e la Memoria</span></h2>
-            <div class="content-wrapper">
-                <div class="text-block">
-                    <p class="lead">La vita di Pascoli non è solo una biografia, è una ferita aperta che diventa letteratura.</p>
-                    <p>L’uccisione del padre, avvenuta il <strong>10 agosto 1867</strong>, trasforma la realtà in un luogo ostile. La perdita della madre e dei fratelli costringe il poeta a rifugiarsi in un passato idealizzato, creando il mito del <strong>Nido</strong>: un perimetro sacro dove i morti e i vivi coesistono, protetti dalla crudeltà del progresso e della storia.</p>
+    <main class="container">
+        
+        <section id="vita" class="section">
+            <h2 class="section-title fade-in">La Vita: <span class="oro">Il Trauma</span></h2>
+            <div class="content-grid">
+                <div class="text-side fade-in">
+                    <h3>L'eccidio di San Mauro</h3>
+                    <p>Il <strong>10 agosto 1867</strong> segna la fine dell'infanzia di Pascoli. L'omicidio del padre Ruggero rimane un mistero impunito, un'ingiustizia che genera nel poeta una visione del mondo come un luogo dominato dal male e dal caso.</p>
+                    <p>Seguirono anni di lutti: la morte della madre, della sorella Margherita e dei fratelli Luigi e Giacomo. Questa catena di perdite distrugge il suo equilibrio psichico, portandolo a cercare rifugio nel **Nido**, ovvero la ricostruzione dell'intimità familiare con le sorelle Ida e Mariù a Castelvecchio di Barga.</p>
                 </div>
-                <div class="info-card">
-                    <h3>Punti Chiave</h3>
-                    <ul>
-                        <li>Assassinio del padre (mistero irrisolto)</li>
-                        <li>Legame morboso con le sorelle</li>
-                        <li>Rifiuto del mondo esterno</li>
-                    </ul>
+                <div class="focus-box fade-in">
+                    <h4>Concetto Chiave: Il Nido</h4>
+                    <p>È un rifugio caldo e protettivo, ma anche una prigione psicologica che impedisce al poeta di avere relazioni mature (si opporrà ferocemente al matrimonio della sorella Ida).</p>
                 </div>
             </div>
         </section>
 
-        <section id="fanciullino" class="dark-section section-padding fade-up">
-            <h2 class="display-title text-panna">La Poetica del <br><span class="oro-text">Fanciullino</span></h2>
-            <div class="glass-container">
-                <p>Non è un ragionamento logico, ma un'intuizione. Il poeta è colui che conserva la capacità di stupirsi delle piccole cose: il ronzio di un'ape, il colore di un fiore, il suono della pioggia. È una conoscenza <strong>pre-razionale</strong> che rivela l'essenza segreta del mondo.</p>
+        <section id="fanciullino" class="section">
+            <h2 class="section-title fade-in">Il Fanciullino: <span class="oro">La Poetica</span></h2>
+            <div class="wide-content fade-in">
+                <p class="big-text">"È dentro noi un fanciullino che non solo brividisce... ma lagrima e gioisce insieme."</p>
+                <div class="study-points">
+                    <div class="point">
+                        <strong>Intuizione:</strong> La poesia non è razionalità, ma stupore infantile.
+                    </div>
+                    <div class="point">
+                        <strong>Veggenza:</strong> Il poeta è un "veggente" che scopre l'essenza segreta delle cose.
+                    </div>
+                    <div class="point">
+                        <strong>Linguaggio:</strong> Uso di onomatopee (suoni naturali come <em>"chiù"</em> o <em>"don don"</em>) e termini tecnici di botanica e ornitologia.
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="gelsomino" class="section-padding fade-up">
-            <h2 class="display-title">Il Gelsomino <br><span class="oro-text">Notturno</span></h2>
-            <div class="interactive-poetry">
-                <div class="poem-card">
-                    <div class="strophe">
-                        <p>E s’aprono i fiori notturni,</p>
-                        <p>nell’ora che penso ai miei cari.</p>
-                        <p>Sono apparse in mezzo ai viburni</p>
-                        <p>le farfalle crepuscolari.</p>
-                    </div>
-                    <div class="strophe">
-                        <p>Dai calici aperti si esala</p>
-                        <p>l’odore di fragole rosse.</p>
-                        <p>Splende un lume là nella sala.</p>
-                        <p>Nasce l’erba sopra le fosse.</p>
-                    </div>
+        <section id="politica" class="section dark">
+            <h2 class="section-title fade-in" style="color: var(--oro);">Pensiero Politico</h2>
+            <div class="content-grid">
+                <div class="text-side fade-in">
+                    <p>Inizialmente vicino all'anarchismo e al socialismo (per cui scontò anche mesi di carcere), Pascoli approda a un <strong>Socialismo Umanitario</strong>. </p>
+                    <p>Non crede nella lotta di classe, ma nella fratellanza. Nel discorso <em>"La Grande Proletaria si è mossa"</em> (1911), sostiene la guerra in Libia perché vede l'Italia come una nazione povera che deve dare terra ai suoi figli emigranti.</p>
                 </div>
-                <div class="analysis-side">
-                    <div class="analysis-box">
-                        <span class="tag">Simbolismo</span>
-                        <p>Il fiore che si schiude è l'immagine della vita che sboccia, ma per Pascoli è legata al pensiero dei morti.</p>
+            </div>
+        </section>
+
+        <section id="gelsomino" class="section">
+            <h2 class="section-title fade-in">Il Gelsomino Notturno</h2>
+            <div class="poetry-dual fade-in">
+                <div class="lyrics">
+                    <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.<br>Sono apparse in mezzo ai viburni<br>le farfalle crepuscolari.</p>
+                    <p>Da un pezzo si tacquero i gridi:<br>là sola una casa bisbiglia.<br>Sotto l’ali dormono i nidi,<br>come gli occhi sotto le ciglia.</p>
+                    <p>Dai calici aperti si esala<br>l’odore di fragole rosse.<br>Splende un lume là nella sala.<br>Nasce l’erba sopra le fosse.</p>
+                    <p>Un’ape tardiva sussurra...<br>È l’alba: si chiudono i petali<br>un poco gualciti; si cova...</p>
+                </div>
+                <div class="analysis-list">
+                    <div class="analysis-card">
+                        <strong>Eros e Esclusione:</strong> Mentre nella casa avviene l'unione sessuale (il lume), il poeta resta fuori a pensare ai morti.
                     </div>
-                    <div class="analysis-box">
-                        <span class="tag">Sinestesia</span>
-                        <p>"Odore di fragole rosse": una fusione di sensi che evoca l'erotismo che il poeta osserva ma non può vivere.</p>
+                    <div class="analysis-card">
+                        <strong>Il Simbolismo:</strong> Il fiore che si schiude e poi appassisce ("gualcito") è simbolo del concepimento e della perdita della verginità.
+                    </div>
+                    <div class="analysis-card">
+                        <strong>Regressione:</strong> Il linguaggio infantile (la Chioccetta per le stelle) indica il desiderio di non crescere mai.
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>© 2026 - Analisi Critica Letteraria</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
