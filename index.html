@@ -3,206 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Pascoli: Il Poeta del Nido</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --blu-notte: #001F3F;
-            --panna: #FDF5E6;
-            --oro: #D4AF37;
-            --oro-light: #F1E5AC;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: var(--panna);
-            color: var(--blu-notte);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--blu-notte);
-        }
-
-        /* Header Dinamico */
-        header {
-            background-color: var(--blu-notte);
-            color: var(--panna);
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--oro);
-        }
-
-        header h1 { font-size: 3.5rem; color: var(--oro); margin-bottom: 10px; }
-        header p { font-style: italic; font-size: 1.2rem; opacity: 0.9; }
-
-        /* Contenitore Principale */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Sezioni */
-        section {
-            margin-bottom: 60px;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid var(--oro-light);
-        }
-
-        .section-title {
-            border-bottom: 2px solid var(--oro);
-            display: inline-block;
-            margin-bottom: 25px;
-            padding-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Griglia Politica e Vita */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            padding: 20px;
-            border-left: 4px solid var(--oro);
-            background: #fff;
-        }
-
-        /* FOCUS: IL GELSOMINO NOTTURNO (LAYOUT SPECIALE) */
-        .poetry-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background-color: #fff;
-            padding: 30px;
-            border: 2px solid var(--oro);
-            border-radius: 10px;
-        }
-
-        .lyrics {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            background: var(--panna);
-            padding: 25px;
-            border-radius: 5px;
-            font-style: italic;
-        }
-
-        .analysis {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .analysis-point {
-            background: var(--blu-notte);
-            color: var(--panna);
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            position: relative;
-        }
-
-        .analysis-point::before {
-            content: "✦";
-            color: var(--oro);
-            margin-right: 10px;
-        }
-
-        /* Responsive per Cellulari */
-        @media (max-width: 768px) {
-            .poetry-container { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.2rem; }
-            .container { padding: 15px; }
-        }
-
-        /* Animazione Hover */
-        .card:hover, .analysis-point:hover {
-            transform: translateY(-5px);
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-    </style>
+    <title>Giovanni Pascoli | Il Poeta del Nido</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>Giovanni Pascoli</h1>
-    <p>"Il fanciullino che è in noi..."</p>
-</header>
+    <nav class="navbar">
+        <div class="logo">PASCOLI<span>2026</span></div>
+        <ul class="nav-links">
+            <li><a href="#vita">Vita</a></li>
+            <li><a href="#politica">Politica</a></li>
+            <li><a href="#fanciullino">Fanciullino</a></li>
+            <li><a href="#gelsomino">Il Gelsomino</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
-
-    <section id="vita">
-        <h2 class="section-title">La Vita e il Trauma</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Il 10 Agosto</h3>
-                <p>L'uccisione del padre segna l'inizio del crollo del "nido". Una ferita mai rimarginata che dominerà tutta la sua produzione poetica.</p>
-            </div>
-            <div class="card">
-                <h3>Il Nido</h3>
-                <p>La ricerca ossessiva di ricostruire l'unità familiare con le sorelle, rifiutando il mondo esterno e l'amore adulto.</p>
-            </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Giovanni Pascoli</h1>
+            <p>L'orfano, il poeta, il fanciullino.</p>
+            <div class="divider"></div>
         </div>
-    </section>
+    </header>
 
-    <section id="fanciullino" style="background-color: var(--blu-notte); color: white;">
-        <h2 class="section-title" style="color: var(--oro); border-color: var(--oro);">Il Fanciullino</h2>
-        <p>Per Pascoli, la poesia non è invenzione, ma <strong>scoperta</strong>. Il poeta è colui che sa guardare il mondo con la meraviglia tipica dell'infanzia, vedendo le somiglianze segrete tra le cose (Analogismo).</p>
-    </section>
-
-    <section id="gelsomino">
-        <h2 class="section-title">Il Gelsomino Notturno</h2>
-        <div class="poetry-container">
-            <div class="lyrics">
-                E s’aprono i fiori notturni,<br>
-                nell’ora che penso ai miei cari.<br>
-                Sono apparse in mezzo ai viburni<br>
-                le farfalle crepuscolari.<br><br>
-                Da un pezzo si tacquero i gridi:<br>
-                là sola una casa bisbiglia.<br>
-                Sotto l’ali dormono i nidi,<br>
-                come gli occhi sotto le ciglia.<br><br>
-                Dai calici aperti si esala<br>
-                l’odore di fragole rosse.<br>
-                Splende un lume là nella sala.<br>
-                Nasce l’erba sopra le fosse...
-            </div>
-
-            <div class="analysis">
-                <div class="analysis-point">
-                    <strong>Il Simbolismo:</strong> I fiori che si aprono di notte rappresentano l'inizio del rito nuziale degli amici di Pascoli.
+    <main class="container">
+        <section id="vita" class="fade-in">
+            <h2 class="section-title">Il Trauma del Nido</h2>
+            <div class="grid">
+                <div class="card card-dark">
+                    <h3>10 Agosto 1867</h3>
+                    <p>L'assassinio del padre Ruggero rompe per sempre l'idillio familiare. È l'inizio della poetica del dolore.</p>
                 </div>
-                <div class="analysis-point">
-                    <strong>Sinestesia:</strong> "Odore di fragole rosse" unisce olfatto e vista per evocare una sensazione di erotismo velato.
-                </div>
-                <div class="analysis-point">
-                    <strong>Eros e Thanatos:</strong> Il poeta accosta il "lume" (vita/amore) all'erba sulle "fosse" (morte), mostrando la sua esclusione dalla felicità.
-                </div>
-                <div class="analysis-point">
-                    <strong>Il Voyeurismo:</strong> Pascoli osserva dall'esterno, come un bambino escluso dal mistero della procreazione.
+                <div class="card card-gold">
+                    <h3>Il Recinto del Nido</h3>
+                    <p>La casa di Castelvecchio diventa un rifugio sacro e invalicabile contro la violenza del mondo esterno.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-</div>
+        <section id="politica" class="fade-in">
+            <h2 class="section-title">Socialismo Umanitario</h2>
+            <div class="info-box">
+                <p>Pascoli sogna una società senza conflitti di classe, basata sulla fratellanza. Celebre il suo discorso <em>"La grande proletaria si è mossa"</em> a favore dei lavoratori italiani.</p>
+            </div>
+        </section>
 
-<footer style="text-align: center; padding: 40px; font-size: 0.8rem; color: #777;">
-    Presentazione Didattica Interattiva - Design Professionale Oro e Blu
-</footer>
+        <section id="fanciullino" class="fanciullino-bg fade-in">
+            <h2 class="section-title">Il Fanciullino</h2>
+            <p class="quote">"È dentro noi un fanciullino che non solo brividisce... ma lagrima e gioisce insieme."</p>
+            <p>La poesia è la capacità di vedere il mondo con occhi nuovi, scoprendo il mistero nelle piccole cose.</p>
+        </section>
 
+        <section id="gelsomino" class="fade-in">
+            <h2 class="section-title">Il Gelsomino Notturno</h2>
+            <div class="poetry-layout">
+                <div class="poetry-text">
+                    <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari...</p>
+                    <p>Da un pezzo si tacquero i gridi:<br>là sola una casa bisbiglia...</p>
+                    <p>Dai calici aperti si esala<br>l’odore di fragole rosse...</p>
+                    <p>È l’alba: si chiudono i petali<br>un poco gualciti; si cova...</p>
+                </div>
+                <div class="poetry-analysis">
+                    <div class="analysis-item" data-topic="Eros">
+                        <strong>Simbolismo Erotico</strong>
+                        <p>L'odore di "fragole rosse" allude all'atto amoroso che avviene nella casa.</p>
+                    </div>
+                    <div class="analysis-item" data-topic="Esclusione">
+                        <strong>L'Esclusione</strong>
+                        <p>Il poeta osserva da fuori, bloccato nel suo "nido" infantile e nei ricordi dei morti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Progetto Italiano 2026 - Ottimizzato per iPad e LIM</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
