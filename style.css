@@ -1,180 +1,147 @@
-/* --- TEMA --- */
+/* --- SETTINGS ASSURDI --- */
 :root {
-    --deep-blue: #0F172A; /* Blu Notte Reale */
-    --panna-luxe: #FDFCF8; /* Panna pregiato */
-    --gold-leaf: #C5A059; /* Oro foglia */
-    --text-dark: #1E293B;
-    --text-light: #E2E8F0;
+    --bg: #05070a;
+    --panna: #f4eee0;
+    --gold: #c5a059;
+    --deep-blue: #0a121e;
 }
 
-/* --- RESET --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
 
 body {
-    background-color: var(--panna-luxe);
-    color: var(--text-dark);
+    background-color: var(--bg);
+    color: var(--panna);
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.8;
     overflow-x: hidden;
 }
 
-/* --- HERO --- */
-.hero {
+/* --- HERO FULLSCREEN --- */
+.hero-fullscreen {
     height: 100vh;
-    background: var(--deep-blue);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     position: relative;
-    text-align: center;
-    color: var(--panna-luxe);
+    background: radial-gradient(circle, #1a2a44 0%, #05070a 100%);
 }
 
-.profile-wrapper img {
-    width: 220px;
-    height: 220px;
+.profile-frame {
+    position: relative;
+    z-index: 5;
+}
+
+.profile-frame img {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 3px solid var(--gold-leaf);
-    padding: 10px;
-    box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
-    margin-bottom: 30px;
+    filter: sepia(0.5) brightness(0.8);
+    transition: 1s;
 }
 
-.hero h1 {
+.profile-frame:hover img {
+    filter: sepia(0) brightness(1);
+    transform: scale(1.05);
+}
+
+.gold-ring {
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+
+.giant-title {
     font-family: 'Bodoni Moda', serif;
-    font-size: 6rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-.separator {
-    width: 80px;
-    height: 4px;
-    background: var(--gold-leaf);
-    margin: 20px auto;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold-leaf);
+    font-size: 15vw;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(197, 160, 89, 0.3);
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    letter-spacing: -5px;
 }
 
 /* --- SEZIONI --- */
-.section { padding: 140px 0; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 200px 0; position: relative; }
 
-.title-display {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 4rem;
-    margin-bottom: 50px;
-    line-height: 1;
+/* BIO LUXURY */
+.bio-luxury { background-color: var(--panna); color: var(--bg); }
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 80px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 50px 50px 100px rgba(0,0,0,0.1);
 }
 
-.title-display.gold { color: var(--gold-leaf); }
-.center { text-align: center; }
-
-/* --- GRID LAYOUTS --- */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 100px;
-    align-items: center;
-}
-
-.lead {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-    color: var(--gold-leaf);
-}
-
-.card-glass {
-    background: white;
-    padding: 40px;
-    border-radius: 4px;
-    box-shadow: 20px 20px 0px rgba(15, 23, 42, 0.05);
-    margin-bottom: 30px;
-    border-left: 5px solid var(--gold-leaf);
-}
-
-.card-num {
+.sub-title-gold {
     font-family: 'Bodoni Moda';
-    font-size: 2.5rem;
-    color: var(--gold-leaf);
-    display: block;
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 30px;
 }
 
-/* --- POLITICA SECTION --- */
-.blue-section {
-    background-color: var(--deep-blue);
-    color: var(--panna-luxe);
-}
+.elegant-p { font-size: 1.4rem; font-weight: 300; line-height: 2; }
 
-.politics-body {
+/* POLITICS SECT */
+.politics-section { background: var(--deep-blue); }
+
+.politics-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    font-size: 1.2rem;
+    gap: 100px;
+    margin-top: 100px;
 }
 
-.highlight {
-    padding: 40px;
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    border-radius: 10px;
+.pol-item h3 { font-family: 'Bodoni Moda'; font-size: 2rem; margin: 20px 0; color: var(--gold); }
+.accent-line { width: 40px; height: 2px; background: var(--panna); }
+.accent-line.gold { background: var(--gold); }
+
+/* GELSOMINO EXPERIENCE */
+.poetry-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
 }
 
-/* --- POETRY SECTION --- */
-.poetry-flex {
-    display: flex;
-    gap: 80px;
-    margin-top: 60px;
-    align-items: stretch;
+.sticky-analysis {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
 }
 
-.poetry-card {
-    flex: 1;
-    background: var(--deep-blue);
-    color: var(--panna-luxe);
-    padding: 60px;
-    border-radius: 5px;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1.8rem;
+.analysis-title { font-family: 'Bodoni Moda'; font-size: 4rem; color: var(--gold); line-height: 0.9; margin-bottom: 40px; }
+
+.scrolling-verses { padding-bottom: 300px; }
+.verse-block {
+    margin-bottom: 150px;
+    font-family: 'Bodoni Moda';
+    font-size: 2.5rem;
     font-style: italic;
-    box-shadow: 30px 30px 0 var(--gold-leaf);
+    opacity: 0.8;
 }
 
-.poetry-analysis {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tag-container { margin-top: 30px; }
-.tag {
-    background: var(--gold-leaf);
-    color: var(--deep-blue);
+/* KEYWORDS TAGS */
+.keywords { margin-top: 30px; }
+.keywords span {
+    display: inline-block;
+    border: 1px solid var(--gold);
     padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
     margin-right: 10px;
-}
-
-/* --- FOOTER --- */
-footer {
-    padding: 60px;
-    background: #000;
-    color: white;
-    text-align: center;
+    font-size: 0.7rem;
     letter-spacing: 2px;
 }
 
+/* FOOTER */
+.final-footer { padding: 100px; text-align: center; font-weight: 100; letter-spacing: 10px; opacity: 0.5; }
+
 /* --- RESPONSIVE --- */
-@media (max-width: 1024px) {
-    .content-grid, .politics-body, .poetry-flex { grid-template-columns: 1fr; flex-direction: column; }
-    .hero h1 { font-size: 3.5rem; }
+@media (max-width: 768px) {
+    .giant-title { font-size: 20vw; }
+    .politics-grid, .poetry-wrap { grid-template-columns: 1fr; }
+    .glass-container { padding: 30px; }
 }
