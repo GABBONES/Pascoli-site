@@ -11,19 +11,69 @@
 <!-- AOS Animation Library -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content" data-aos="fade-up">
         <h1>Giovanni Pascoli</h1>
         <p class="subtitle">Il Nido, il Fanciullino, il Mistero della Notte</p>
-        <a href="#gelsomino" class="btn">Scopri di più</a>
+        <a href="#biografia" class="btn">Inizia il viaggio</a>
     </div>
 </header>
 
+<!-- BIOGRAFIA -->
+<section id="biografia" class="biografia-section">
+  <div class="container">
+    <h2 data-aos="fade-right">Biografia</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up">
+        <span class="year">1855</span>
+        <p>Nascita a San Mauro di Romagna.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up">
+        <span class="year">1867</span>
+        <p>Perde il padre in circostanze tragiche.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up">
+        <span class="year">1871</span>
+        <p>Muore il fratello maggiore Carlo; famiglia profondamente segnata.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up">
+        <span class="year">1912</span>
+        <p>Muore a Bologna, lasciando un’eredità poetica straordinaria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIONE POLITICA -->
+<section id="politica" class="politica-section">
+  <div class="container">
+    <h2 data-aos="fade-right">Visione Politica</h2>
+    <p data-aos="fade-up">
+      Pascoli sosteneva un <strong>socialismo umanitario</strong> e la creazione di una “nazione proletaria”, 
+      in cui la solidarietà e la giustizia sociale erano valori centrali.
+    </p>
+  </div>
+</section>
+
+<!-- IL FANCIULLINO -->
+<section id="fanciullino" class="fanciullino-section">
+  <div class="container">
+    <h2 data-aos="fade-right">Il Fanciullino</h2>
+    <p data-aos="fade-up">
+      Il <em>Fanciullino</em> rappresenta l’idea che l’artista mantiene dentro di sé la capacità di meravigliarsi, 
+      osservando il mondo con occhi puri e innocenti. Questa sensibilità permette di cogliere la bellezza anche nelle piccole cose.
+    </p>
+  </div>
+</section>
+
+<!-- IL GELSOMINO NOTTURNO -->
 <section id="gelsomino" class="gelsomino-section">
     <div class="container">
         <h2 data-aos="fade-right">Il Gelsomino Notturno</h2>
@@ -88,10 +138,12 @@
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>Progetto di Grafica e Comunicazione – Studio su Giovanni Pascoli</p>
 </footer>
 
+<!-- SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({
