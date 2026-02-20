@@ -2,75 +2,207 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Pascoli | Editorial Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,900;1,900&family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Pascoli: Il Poeta del Nido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blu-notte: #001F3F;
+            --panna: #FDF5E6;
+            --oro: #D4AF37;
+            --oro-light: #F1E5AC;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--panna);
+            color: var(--blu-notte);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--blu-notte);
+        }
+
+        /* Header Dinamico */
+        header {
+            background-color: var(--blu-notte);
+            color: var(--panna);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--oro);
+        }
+
+        header h1 { font-size: 3.5rem; color: var(--oro); margin-bottom: 10px; }
+        header p { font-style: italic; font-size: 1.2rem; opacity: 0.9; }
+
+        /* Contenitore Principale */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Sezioni */
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid var(--oro-light);
+        }
+
+        .section-title {
+            border-bottom: 2px solid var(--oro);
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Griglia Politica e Vita */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            padding: 20px;
+            border-left: 4px solid var(--oro);
+            background: #fff;
+        }
+
+        /* FOCUS: IL GELSOMINO NOTTURNO (LAYOUT SPECIALE) */
+        .poetry-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border: 2px solid var(--oro);
+            border-radius: 10px;
+        }
+
+        .lyrics {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            background: var(--panna);
+            padding: 25px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .analysis {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .analysis-point {
+            background: var(--blu-notte);
+            color: var(--panna);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .analysis-point::before {
+            content: "✦";
+            color: var(--oro);
+            margin-right: 10px;
+        }
+
+        /* Responsive per Cellulari */
+        @media (max-width: 768px) {
+            .poetry-container { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
+            .container { padding: 15px; }
+        }
+
+        /* Animazione Hover */
+        .card:hover, .analysis-point:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+    </style>
 </head>
 <body>
 
-    <div class="cursor"></div>
+<header>
+    <h1>Giovanni Pascoli</h1>
+    <p>"Il fanciullino che è in noi..."</p>
+</header>
 
-    <header class="hero">
-        <div class="hero-grid">
-            <div class="hero-left" data-aos="fade-right">
-                <h1 class="main-title">GIOVANNI<br><span>PASCOLI</span></h1>
-                <p class="hero-tagline">Oltre il Nido, nel Mistero.</p>
+<div class="container">
+
+    <section id="vita">
+        <h2 class="section-title">La Vita e il Trauma</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Il 10 Agosto</h3>
+                <p>L'uccisione del padre segna l'inizio del crollo del "nido". Una ferita mai rimarginata che dominerà tutta la sua produzione poetica.</p>
             </div>
-            <div class="hero-right" data-aos="zoom-in">
-                <div class="image-wrapper">
-                    <img src="https://vino.museidelcibo.it/wp-content/uploads/sites/7/2021/04/05a-Giovanni-Pascoli.jpg" alt="Pascoli">
-                </div>
+            <div class="card">
+                <h3>Il Nido</h3>
+                <p>La ricerca ossessiva di ricostruire l'unità familiare con le sorelle, rifiutando il mondo esterno e l'amore adulto.</p>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section class="section panna">
-        <div class="container">
-            <div class="content-wrapper">
-                <h2 class="gold-text" data-aos="fade-up">10 Agosto 1867</h2>
-                <div class="text-columns" data-aos="fade-up" data-aos-delay="200">
-                    <p class="lead">L'assassinio del padre Ruggero non è storia, è una ferita aperta che genera l'intera sua poetica.</p>
-                    <p>Da questo trauma nasce il <strong>Nido</strong>: un recinto sacro per i superstiti, dove il tempo si ferma e i morti continuano a vivere. È l'unico luogo dove l'anima di Pascoli trova pace dalla ferocia del mondo esterno.</p>
+    <section id="fanciullino" style="background-color: var(--blu-notte); color: white;">
+        <h2 class="section-title" style="color: var(--oro); border-color: var(--oro);">Il Fanciullino</h2>
+        <p>Per Pascoli, la poesia non è invenzione, ma <strong>scoperta</strong>. Il poeta è colui che sa guardare il mondo con la meraviglia tipica dell'infanzia, vedendo le somiglianze segrete tra le cose (Analogismo).</p>
+    </section>
+
+    <section id="gelsomino">
+        <h2 class="section-title">Il Gelsomino Notturno</h2>
+        <div class="poetry-container">
+            <div class="lyrics">
+                E s’aprono i fiori notturni,<br>
+                nell’ora che penso ai miei cari.<br>
+                Sono apparse in mezzo ai viburni<br>
+                le farfalle crepuscolari.<br><br>
+                Da un pezzo si tacquero i gridi:<br>
+                là sola una casa bisbiglia.<br>
+                Sotto l’ali dormono i nidi,<br>
+                come gli occhi sotto le ciglia.<br><br>
+                Dai calici aperti si esala<br>
+                l’odore di fragole rosse.<br>
+                Splende un lume là nella sala.<br>
+                Nasce l’erba sopra le fosse...
+            </div>
+
+            <div class="analysis">
+                <div class="analysis-point">
+                    <strong>Il Simbolismo:</strong> I fiori che si aprono di notte rappresentano l'inizio del rito nuziale degli amici di Pascoli.
+                </div>
+                <div class="analysis-point">
+                    <strong>Sinestesia:</strong> "Odore di fragole rosse" unisce olfatto e vista per evocare una sensazione di erotismo velato.
+                </div>
+                <div class="analysis-point">
+                    <strong>Eros e Thanatos:</strong> Il poeta accosta il "lume" (vita/amore) all'erba sulle "fosse" (morte), mostrando la sua esclusione dalla felicità.
+                </div>
+                <div class="analysis-point">
+                    <strong>Il Voyeurismo:</strong> Pascoli osserva dall'esterno, come un bambino escluso dal mistero della procreazione.
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section gelsomino">
-        <div class="container">
-            <div class="poetry-grid">
-                <div class="poetry-text" data-aos="fade-right">
-                    <h2 class="poetry-header">IL GELSOMINO<br>NOTTURNO</h2>
-                    <div class="verses">
-                        <p>E s’aprono i fiori notturni,<br>nell’ora che penso ai miei cari.</p>
-                        <p>Dai calici aperti si esala<br>l’odore di fragole rosse.</p>
-                        <p>È l’alba: si chiudono i petali<br>un poco gualciti; si cova...</p>
-                    </div>
-                </div>
-                <div class="poetry-analysis" data-aos="fade-left">
-                    <div class="analysis-card">
-                        <h3>L'Eros dell'Escluso</h3>
-                        <p>Mentre la casa "bisbiglia" e la vita nasce, il poeta resta sulla soglia. È il dramma di chi osserva la fecondazione ma appartiene al mondo dei morti.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <footer class="footer">
-        <p>© 2026 DESIGN BY GEMINI | STUDIO PASCOLI</p>
-    </footer>
+<footer style="text-align: center; padding: 40px; font-size: 0.8rem; color: #777;">
+    Presentazione Didattica Interattiva - Design Professionale Oro e Blu
+</footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    </script>
 </body>
 </html>
